@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"
+      async
+      defer
+    ></script>
+
+    <title>Open Weather API - Example</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="blue">
+      <div class="container">
+        <div class="nav-wrapper ">
+          <a href="#" class="brand-logo center">Weather Info</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container main" id="main">
+      <div class="center row form ">
+        <div class="input-field col s12 m6 offset-m3">
+          <input id="city" type="text" class="validate" />
+          <label for="city">Enter City</label>
+        </div>
+        <div class="col s12 m4 offset-m4">
+          <button class="btn waves-effect blue" id="checkbycity">
+            Check Weather
+          </button>
+        </div>
+        <div class="col s12 m4 offset-m4 " style="margin-top:2rem;">OR</div>
+        <div class="col s12 m4 offset-m4">
+          <button
+            class="btn waves-effect blue"
+            id="checkbyloc"
+            style="margin-top:2rem;"
+          >
+            Get Data For Current Location
+          </button>
+        </div>
+	<!--
+        <div class="col s12 m4 offset-m4">
+          <button
+            class="btn waves-effect blue"
+            id="fivedays"
+            style="margin-top:2rem;"
+          >
+            Get five days data
+          </button>
+        </div>
+	-->
+      </div>
+      <!-- Result area -->
+      <div class="row reult-box">
+        <div class="col s12 m6 offset-m3">
+          <div class="card center" id="result"></div>
+        </div>
+      </div>
+
+      <!-- Chart Area -->
+      <div class="row forecast-box">
+        <div class="col s12 m8 offset-m2"><canvas id="forecast"></canvas></div>
+      </div>
+    </div>
+
+    <!-- Pre-loader -->
+    <div class="spinner-container" id="loader">
+      <div
+        class="preloader-wrapper big active"
+        style="left: 50%;margin-left: -4em;top:40%;"
+      >
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left"><div class="circle"></div></div>
+          <div class="gap-patch"><div class="circle"></div></div>
+          <div class="circle-clipper right"><div class="circle"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container center">
+      <small
+        >Note : The data is coming from the openweathermap.org API and this
+        website is only for the learning purpose data may be wrong.</small
+      >
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

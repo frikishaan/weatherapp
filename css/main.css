@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.spinner-container {
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: white;
+}
+.main {
+  margin-top: 75px !important;
+}
+.form {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2rem !important;
+}
+#result {
+  display: none;
+  padding: 1.2rem !important;
+  border-radius: 4px !important;
+  border-top: 3px solid #2196f3;
+}
+#forecast {
+  display: none;
+}
