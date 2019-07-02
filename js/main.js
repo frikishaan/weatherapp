@@ -191,7 +191,7 @@ fiveDays.addEventListener("click", function() {
   console.log(d.getDate());
 
   fetch(
-    "https://api.openweathermap.org/data/2.5/forecast?q=lucknow&units=metric&appid=65a4296e3d6fd7f8f8709785cea0bdad"
+    "https://api.openweathermap.org/data/2.5/forecast?q=lucknow&units=metric&appid={api-key}"
   )
     .then(response => response.json())
     .then(data => {
